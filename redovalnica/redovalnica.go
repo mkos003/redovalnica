@@ -33,6 +33,15 @@ type Student struct {
 	ocene   []int
 }
 
+// NewStudent creates a new student with the given name, surname, and grades.
+func NewStudent(ime, priimek string, ocene []int) Student {
+	return Student{
+		ime:     ime,
+		priimek: priimek,
+		ocene:   ocene,
+	}
+}
+
 // Redovalnica represents a gradebook containing multiple students.
 type Redovalnica struct {
 	studenti map[string]Student
